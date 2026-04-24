@@ -1,0 +1,20 @@
+/* ── App Wrapper ── */
+.app-hidden {
+  opacity: 0;
+}
+
+.app-visible {
+  opacity: 1;
+  animation: appFadeIn 0.8s ease forwards;
+}
+
+@keyframes appFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
