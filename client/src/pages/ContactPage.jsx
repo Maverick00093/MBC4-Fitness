@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { API_ENDPOINTS } from '../api/config';
 import './ContactPage.css';
 
 /**
@@ -44,7 +45,7 @@ function ContactPage() {
     setStatus({ type: '', message: '' });
 
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch(API_ENDPOINTS.CONTACT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -84,7 +85,7 @@ function ContactPage() {
     setStatus({ type: '', message: '' });
 
     try {
-      const res = await fetch('/api/book', {
+      const res = await fetch(API_ENDPOINTS.BOOK, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
