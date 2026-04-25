@@ -16,6 +16,8 @@ const allowedOrigins = [
   'http://localhost:5173', // Vite default
 ].filter(Boolean);
 
+
+
 app.use(cors({
   origin: (origin, callback) => {
     // Allow requests with no origin (like mobile apps or curl requests)
